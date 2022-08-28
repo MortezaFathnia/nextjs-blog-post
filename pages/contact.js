@@ -1,9 +1,7 @@
-function ContactPage(){
-return(
-  <div>
-    <h1>Contact page</h1>
-  </div>
-)
+import ContactFrom from "../components/contact/contact-form";
+
+function ContactPage() {
+  return (<ContactFrom />)
 }
 
 export default ContactPage;
