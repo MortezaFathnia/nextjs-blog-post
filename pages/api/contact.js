@@ -35,10 +35,8 @@ async function handler(req, res) {
 
     try {
       const result = await db.collection('messages').insertOne(newMessage);
-      console.log(result)
       newMessage.id = result.insertedId;
     } catch (error) {
-      console.log(error);
       client.close();
       res.status(500).json({ message: 'Storing message failed!' });
       return;
