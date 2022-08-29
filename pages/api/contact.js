@@ -29,7 +29,7 @@ async function handler(req, res) {
       res.status(500).json({ message: 'Could not connect to database' });
     }
 
-    const db = client.db('mysite');
+    const db = client.db(process.env.mongodb_database);
 
 
 
